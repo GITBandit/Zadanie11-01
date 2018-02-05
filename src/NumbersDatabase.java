@@ -7,8 +7,13 @@ public class NumbersDatabase {
         TreeSet<Integer> newNumbersList = new TreeSet<>();
         Random random = new Random();
 
-        for(int i = 0; i < 50; i++){
+        boolean isFifty = false;
+
+        while(!isFifty){
             newNumbersList.add(random.nextInt(100));
+            if (newNumbersList.size() >= 50){
+                isFifty = true;
+            }
         }
 
         return newNumbersList;
